@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: opus-x-pro
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m g4f.cli api --bind 0.0.0.0:$PORT
